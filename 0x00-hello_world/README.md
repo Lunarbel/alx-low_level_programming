@@ -1,1 +1,1 @@
-compiles a C file and creates an executable named cisfun
+ "Programming is like building a multilingual puzzle, followed by a new line
