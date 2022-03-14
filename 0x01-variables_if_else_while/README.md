@@ -1,1 +1,1 @@
-prints the alphabet in lowercase, followed by a new line
+prints all possible combinations of single-digit numbers
