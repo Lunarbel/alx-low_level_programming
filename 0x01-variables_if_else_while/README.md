@@ -1,1 +1,1 @@
-prints all possible combinations of single-digit numbers
+all the numbers of base 16 in lowercase, followed by a new line
