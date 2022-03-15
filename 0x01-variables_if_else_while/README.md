@@ -1,1 +1,1 @@
-prints all possible different combinations of three digits
+prints the alphabet in lowercase, followed by a new line
