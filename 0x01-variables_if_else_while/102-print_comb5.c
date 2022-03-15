@@ -1,41 +1,51 @@
 #include <stdio.h>
 /**
  * main - main block
- * Description: Print all possible different combinations of 3 digits.
- * Numbers must be separarted by commas and a space.
- * The 3 digits must be different.
- * 012, 120, 102, 021, 201, 210 are considered the same combination.
- * print only the smallest combination of 3 digits
- * Numbers should be printed in ascending order.
+ * Description: Print all possible combinations of two-digit numbers.
+ * Number should range frim 0 to 99.
+ * The two numbers should be separated by space.
+ * All numbers should be printed with two digis. 1 should be printed as 01.
+ * Combinations of numbers must be separated by a comma followedd by a space.
+ * Combinations of numers should be printed in ascending order.
+ * `00 01` and `01 00` are considered as the same combination.
  * You can only use `putchar` to print to console.
- * You can only use `putchar` up to 6 times.
- * You are not allowed to use any variable of type `char`.
+ * You can only use `putchar` up to 8 times.
+ * You are not allowed to usse any variable of type `char`.
  * Return: 0
  */
 int main(void)
 {
-	int i, j, k, l;
+	int i, j;
+	int a, b, c, d;
 
-	for (i = 0; i < 1000; i++)
+	for (i = 0; i < 100; i++)
 	{
-		j = i / 100; /* hundreds */
-		k = (i / 10) % 10; /* tens */
-		l = i % 10; /* singles */
+		a = i / 10; /* doubles fnum */
+		b = i % 10; /* singles fnum */
 
-		if (j < k && k < l)
+		for (j = 0; j < 100; j++)
 		{
-			putchar(j + '0');
-			putchar(k + '0');
-			putchar(l + '0');
+			c = j / 10; /* doubles snum */
+			d = j % 10; /* singles snum */
 
-			if (i < 700)
+			if (a < c || (a == c && b < d))
 			{
-				putchar(44);
+				putchar(a + '0');
+				putchar(b + '0');
 				putchar(32);
+				putchar(c + '0');
+				putchar(d + '0');
+
+				if (!(a == 9 && b == 6))
+				{
+					putchar(44);
+					putchar(32);
+				}
 			}
 		}
 	}
-	putchar('\n');
+	putchar(10);
 
 	return (0);
 }
+
